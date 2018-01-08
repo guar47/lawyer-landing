@@ -64,7 +64,7 @@ header.navigation {
 .slider {
   height: 700px;
   background-color: #28377e;
-  background: url("/img/slider_bg_left.png"), url("/img/slider_bg_right.jpg");
+  background: url("../img/slider_bg_left.png"), url("../img/slider_bg_right.jpg");
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -94,7 +94,7 @@ header.navigation {
 .who-we-are {
   position: relative;
   height: 798px;
-  background-image: url("/img/dots.png"), url("/img/who_we_are_bg.jpg"), url("/img/dots.png");
+  background-image: url("../img/dots.png"), url("../img/who_we_are_bg.jpg"), url("../img/dots.png");
   background-position: -39px 0, 1098px 32px, 1430px 411px;
   background-repeat: no-repeat; }
   .who-we-are article {
@@ -127,7 +127,7 @@ header.navigation {
 
 .what-we-do {
   min-height: 2150px;
-  background-image: url("/img/what_we_do_bg_2.png"), url("/img/what_we_do_bg.png"), url("/img/attorneys_bg.jpg");
+  background-image: url("../img/what_we_do_bg_2.png"), url("../img/what_we_do_bg.png"), url("../img/attorneys_bg.jpg");
   background-position: 924px 400px, 0 0, 0 800px;
   background-repeat: no-repeat;
   position: relative; }
@@ -178,11 +178,11 @@ header.navigation {
       font-weight: 100;
       font-family: 'Myriad Pro'; }
     .what-we-do .services .first {
-      background: url("/img/service_bg_1.jpg"); }
+      background: url("../img/service_bg_1.jpg"); }
     .what-we-do .services .second {
-      background: url("/img/service_bg_2.jpg"); }
+      background: url("../img/service_bg_2.jpg"); }
     .what-we-do .services .third {
-      background: url("/img/service_bg_3.jpg"); }
+      background: url("../img/service_bg_3.jpg"); }
   .what-we-do .arrow-right-link {
     position: absolute;
     top: 391px;

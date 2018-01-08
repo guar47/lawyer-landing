@@ -1,0 +1,273 @@
+$blue: #28377e;
+$gray: #9e9d9e;
+$white: #ffffff;
+@mixin text($font-size: 16px, $color: $white, $font-weight: normal) {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: $font-size;
+  color: $color;
+  font-weight: $font-weight;
+}
+
+body {
+  max-width: 1920px;
+}
+
+ul,
+p {
+  margin: 0;
+}
+
+header.navigation {
+  display: flex;
+  padding: 0 10%;
+  height: 100px;
+  h1 {
+    align-self: center;
+    flex: 1;
+    box-sizing: border-box;
+    a {
+      text-decoration: none;
+      letter-spacing: 6px;
+      vertical-align: middle;
+      @include text(30px, $blue, bold);
+    }
+  }
+  nav {
+    flex: 2;
+    align-self: center;
+    li {
+      padding: 0 28px 0 0;
+    }
+    li a {
+      line-height: 3.4;
+      @include text(12px, $blue, 600);
+    }
+  }
+  .lang {
+    align-self: center;
+    width: 60px;
+    height: 45px;
+    border-radius: 6px;
+    border: solid 1px $gray;
+    cursor: pointer;
+    img {
+      margin: 17px 0 0 13px;
+    }
+    .arrow-up {
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+      border-top: 4px solid $gray;
+      margin: 0 0 3.5px 9px;
+      display: inline-block;
+    }
+  }
+}
+
+.nav-menu ul {
+  list-style-type: none;
+}
+
+.nav-menu li {
+  float: left;
+}
+
+.nav-menu li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.slider {
+  height: 700px;
+  background-color: $blue;
+  background: url('/img/slider_bg_left.png'), url('/img/slider_bg_right.jpg');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  p {
+    margin: 0 auto;
+    @include text(82px,
+    $white,
+    bold);
+  }
+  .arrow-down {
+    position: absolute;
+    top: 605px;
+  }
+  i.down {
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+}
+
+.content {
+  margin: 80px 0 0 0;
+}
+
+.who-we-are {
+  position: relative;
+  height: 798px;
+  background-image: url('/img/dots.png'), url('/img/who_we_are_bg.jpg'), url('/img/dots.png');
+  background-position: -39px 0, 1098px 32px, 1430px 411px;
+  background-repeat: no-repeat;
+  article {
+    width: 27.135416666666667%;
+    height: 378px;
+    position: absolute;
+    left: 430 / 1920 * 100%;
+    top: 67px;
+    h1 {
+      line-height: 1.13;
+      @include text(36px,
+      $blue,
+      bold);
+    }
+    p {
+      font-size: 14px;
+      padding-bottom: 37px;
+      color: #b0b0b1;
+      font-family: 'OpenSans';
+      line-height: 1.71;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 60px;
+      border-bottom: 4px solid #f2622b;
+    }
+  }
+}
+
+.what-we-do {
+  min-height: 2150px;
+  background-image: url('/img/what_we_do_bg_2.png'), url('/img/what_we_do_bg.png'), url('/img/attorneys_bg.jpg');
+  background-position: 924px 400px, 0 0, 0 800px;
+  background-repeat: no-repeat;
+  position: relative;
+  .services {
+    width: 1060 / 1920 * 100%;
+    height: 592px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 86px;
+    h1 {
+      line-height: 1.13;
+      @include text(36px,
+      $blue,
+      bold);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 48%;
+        top: 82px;
+        height: 4px;
+        width: 60px;
+        border-bottom: 4px solid #f2622b;
+      }
+    }
+    .pictures-services {
+      margin: 63px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .service-pic {
+      width: 340px;
+      height: 450px;
+      background-color: #2b2f85;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @include text(26px,
+      $white,
+      bold);
+    }
+    .arrow-right {
+      position: absolute;
+      width: 39px;
+      bottom: 79px;
+      font-size: 26px;
+      font-weight: 100;
+      font-family: 'Myriad Pro';
+    }
+    .first {
+      background: url('/img/service_bg_1.jpg');
+    }
+    .second {
+      background: url('/img/service_bg_2.jpg');
+    }
+    .third {
+      background: url('/img/service_bg_3.jpg');
+    }
+  }
+  .arrow-right-link {
+    position: absolute;
+    top: 391px;
+    left: 325/1920*100%;
+    padding: 17px 0 0 19px;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #bababa;
+    box-sizing: border-box;
+  }
+  i.right {
+    border: solid #bababa;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(135deg);
+    cursor: pointer;
+  }
+  .arrow-left-link {
+    position: absolute;
+    top: 461px;
+    left: 325/1920*100%;
+    padding: 17px 0 0 14px;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #bababa;
+    box-sizing: border-box;
+  }
+  i.left {
+    border: solid #bababa;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(315deg);
+    cursor: pointer;
+  }
+  .attorneys {
+    width: 1060 / 1920 * 100%;
+    height: 1350px;
+    margin: 0 auto;
+    padding: 374px 0 0 0;
+    box-sizing: border-box;
+    position: relative;
+    article {
+      width: 310/1060*100%;
+      h1 {
+        line-height: 1.13;
+        @include text(36px,
+        $white,
+        bold)
+      }
+      p {
+        font-size: 14px;
+        color: #b0b0b1;
+        font-family: 'OpenSans';
+        line-height: 1.71;
+      }
+    }
+  }
+}

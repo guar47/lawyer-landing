@@ -1,0 +1,238 @@
+body {
+  max-width: 1920px; }
+
+ul,
+p {
+  margin: 0; }
+
+header.navigation {
+  display: flex;
+  padding: 0 10%;
+  height: 100px; }
+  header.navigation h1 {
+    align-self: center;
+    flex: 1;
+    box-sizing: border-box; }
+    header.navigation h1 a {
+      text-decoration: none;
+      letter-spacing: 6px;
+      vertical-align: middle;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #28377e;
+      font-weight: bold; }
+  header.navigation nav {
+    flex: 2;
+    align-self: center; }
+    header.navigation nav li {
+      padding: 0 28px 0 0; }
+    header.navigation nav li a {
+      line-height: 3.4;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #28377e;
+      font-weight: 600; }
+  header.navigation .lang {
+    align-self: center;
+    width: 60px;
+    height: 45px;
+    border-radius: 6px;
+    border: solid 1px #9e9d9e;
+    cursor: pointer; }
+    header.navigation .lang img {
+      margin: 17px 0 0 13px; }
+    header.navigation .lang .arrow-up {
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+      border-top: 4px solid #9e9d9e;
+      margin: 0 0 3.5px 9px;
+      display: inline-block; }
+
+.nav-menu ul {
+  list-style-type: none; }
+
+.nav-menu li {
+  float: left; }
+
+.nav-menu li a {
+  display: block;
+  text-align: center;
+  text-decoration: none; }
+
+.slider {
+  height: 700px;
+  background-color: #28377e;
+  background: url("/img/slider_bg_left.png"), url("/img/slider_bg_right.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .slider p {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 82px;
+    color: #ffffff;
+    font-weight: bold; }
+  .slider .arrow-down {
+    position: absolute;
+    top: 605px; }
+  .slider i.down {
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(45deg);
+    cursor: pointer; }
+
+.content {
+  margin: 80px 0 0 0; }
+
+.who-we-are {
+  position: relative;
+  height: 798px;
+  background-image: url("/img/dots.png"), url("/img/who_we_are_bg.jpg"), url("/img/dots.png");
+  background-position: -39px 0, 1098px 32px, 1430px 411px;
+  background-repeat: no-repeat; }
+  .who-we-are article {
+    width: 27.135416666666667%;
+    height: 378px;
+    position: absolute;
+    left: 22.39583%;
+    top: 67px; }
+    .who-we-are article h1 {
+      line-height: 1.13;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 36px;
+      color: #28377e;
+      font-weight: bold; }
+    .who-we-are article p {
+      font-size: 14px;
+      padding-bottom: 37px;
+      color: #b0b0b1;
+      font-family: 'OpenSans';
+      line-height: 1.71; }
+    .who-we-are article:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 60px;
+      border-bottom: 4px solid #f2622b; }
+
+.what-we-do {
+  min-height: 2150px;
+  background-image: url("/img/what_we_do_bg_2.png"), url("/img/what_we_do_bg.png"), url("/img/attorneys_bg.jpg");
+  background-position: 924px 400px, 0 0, 0 800px;
+  background-repeat: no-repeat;
+  position: relative; }
+  .what-we-do .services {
+    width: 55.20833%;
+    height: 592px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 86px; }
+    .what-we-do .services h1 {
+      line-height: 1.13;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 36px;
+      color: #28377e;
+      font-weight: bold; }
+      .what-we-do .services h1:before {
+        content: "";
+        position: absolute;
+        left: 48%;
+        top: 82px;
+        height: 4px;
+        width: 60px;
+        border-bottom: 4px solid #f2622b; }
+    .what-we-do .services .pictures-services {
+      margin: 63px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+    .what-we-do .services .service-pic {
+      width: 340px;
+      height: 450px;
+      background-color: #2b2f85;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 26px;
+      color: #ffffff;
+      font-weight: bold; }
+    .what-we-do .services .arrow-right {
+      position: absolute;
+      width: 39px;
+      bottom: 79px;
+      font-size: 26px;
+      font-weight: 100;
+      font-family: 'Myriad Pro'; }
+    .what-we-do .services .first {
+      background: url("/img/service_bg_1.jpg"); }
+    .what-we-do .services .second {
+      background: url("/img/service_bg_2.jpg"); }
+    .what-we-do .services .third {
+      background: url("/img/service_bg_3.jpg"); }
+  .what-we-do .arrow-right-link {
+    position: absolute;
+    top: 391px;
+    left: 16.92708%;
+    padding: 17px 0 0 19px;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #bababa;
+    box-sizing: border-box; }
+  .what-we-do i.right {
+    border: solid #bababa;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(135deg);
+    cursor: pointer; }
+  .what-we-do .arrow-left-link {
+    position: absolute;
+    top: 461px;
+    left: 16.92708%;
+    padding: 17px 0 0 14px;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #bababa;
+    box-sizing: border-box; }
+  .what-we-do i.left {
+    border: solid #bababa;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(315deg);
+    cursor: pointer; }
+  .what-we-do .attorneys {
+    width: 55.20833%;
+    height: 1350px;
+    margin: 0 auto;
+    padding: 374px 0 0 0;
+    box-sizing: border-box;
+    position: relative; }
+    .what-we-do .attorneys article {
+      width: 29.24528%; }
+      .what-we-do .attorneys article h1 {
+        line-height: 1.13;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+        color: #ffffff;
+        font-weight: bold; }
+      .what-we-do .attorneys article p {
+        font-size: 14px;
+        color: #b0b0b1;
+        font-family: 'OpenSans';
+        line-height: 1.71; }

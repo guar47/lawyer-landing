@@ -1,9 +1,10 @@
 $blue: #28377e;
 $gray: #9e9d9e;
 $white: #ffffff;
-@mixin text($font-size: 16px, $color: $white, $font-weight: normal) {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+$orange: #f2622c;
+@mixin text($font-size: 16px, $color: $white, $font-weight: normal, $font-family: 'Montserrat', $text-transform: uppercase) {
+  font-family: $font-family, sans-serif;
+  text-transform: $text-transform;
   font-size: $font-size;
   color: $color;
   font-weight: $font-weight;
@@ -11,6 +12,9 @@ $white: #ffffff;
 
 body {
   max-width: 1920px;
+  background-image: url('../img/dots.png');
+  background-repeat: no-repeat;
+  background-position: -39px 5146px;
 }
 
 ul,
@@ -30,7 +34,9 @@ header.navigation {
       text-decoration: none;
       letter-spacing: 6px;
       vertical-align: middle;
-      @include text(30px, $blue, bold);
+      @include text(30px,
+      $blue,
+      bold);
     }
   }
   nav {
@@ -41,7 +47,9 @@ header.navigation {
     }
     li a {
       line-height: 3.4;
-      @include text(12px, $blue, 600);
+      @include text(12px,
+      $blue,
+      600);
     }
   }
   .lang {
@@ -130,11 +138,13 @@ header.navigation {
       bold);
     }
     p {
-      font-size: 14px;
       padding-bottom: 37px;
-      color: #b0b0b1;
-      font-family: 'OpenSans';
       line-height: 1.71;
+      @include text(14px,
+      #b0b0b1,
+      normal,
+      'OpenSans',
+      none)
     }
     &:before {
       content: "";
@@ -256,18 +266,355 @@ header.navigation {
     position: relative;
     article {
       width: 310/1060*100%;
+      padding: 121px 0 0 0;
+      position: relative;
       h1 {
+        margin: 0 0 32px 0;
         line-height: 1.13;
         @include text(36px,
         $white,
         bold)
       }
-      p {
-        font-size: 14px;
-        color: #b0b0b1;
-        font-family: 'OpenSans';
+      .attorneys-description {
+        margin: 0 0 50px 0;
         line-height: 1.71;
+        @include text(14px,
+        #929dcf,
+        normal,
+        'OpenSans',
+        none);
+      }
+      .see-more {
+        @include text(18px,
+        $orange,
+        bold,
+        'Montserrat',
+        none);
+        line-height: 2.11;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 86px;
+        height: 4px;
+        width: 60px;
+        border-bottom: 4px solid #f2622b;
       }
     }
+  }
+  .attorneys-pictures {
+    width: 701/1060*100%;
+    height: 932px;
+    position: absolute;
+    top: 314px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    align-content: space-between;
+    .attorney-pic {
+      width: 340px;
+      height: 450px;
+      @include text(26px,
+      $white,
+      bold);
+      position: relative;
+      p {
+        position: absolute;
+        left: 36px;
+        bottom: 51px;
+      }
+    }
+    .first-attorney-pic {
+      background: url('../img/attorneys_pic_bg_1.jpg')
+    }
+    .second-attorney-pic {
+      order: 2;
+      background: url('../img/attorneys_pic_bg_2.jpg')
+    }
+    .third-attorney-pic {
+      background: url('../img/attorneys_pic_bg_3.jpg')
+    }
+    .fourth-attorney-pic {
+      order: 3;
+      background: url('../img/attorneys_pic_bg_4.jpg')
+    }
+  }
+}
+
+.second-slider {
+  background: url('../img/slider_bg_2.jpg');
+  background-color: $orange;
+}
+
+.languages {
+  width: 1060/1920*100%;
+  height: 515px;
+  margin: 126px auto;
+  .language-header {
+    text-align: center;
+    position: relative;
+    h1 {
+      line-height: 1.13;
+      @include text(36px,
+      $blue,
+      bold);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 47%;
+        top: -24px;
+        height: 4px;
+        width: 60px;
+        border-bottom: 4px solid #f2622b;
+      }
+    }
+  }
+  .language-articles {
+    display: flex;
+    justify-content: space-between;
+    header h1 {
+      line-height: 1.7;
+      @include text(24px,
+      $blue,
+      bold);
+    }
+    article.language {
+      width: 245px;
+    }
+    p {
+      line-height: 1.71;
+      padding-bottom: 37px;
+      @include text(14px,
+      #b0b0b1,
+      normal,
+      'OpenSans',
+      none)
+    }
+    .see-more {
+      @include text(18px,
+      $orange,
+      bold);
+      line-height: 2.11;
+      text-decoration: none;
+    }
+  }
+}
+
+.news {
+  height: 695px;
+  margin: 126px auto 0 auto;
+  background: url('../img/news_bg.jpg');
+  .news-header {
+    padding: 95px 0 73px 0;
+    text-align: center;
+    position: relative;
+    h1 {
+      margin: 0;
+      line-height: 1.13;
+      @include text(36px,
+      $blue,
+      bold);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 48.5%;
+        top: 70px;
+        height: 4px;
+        width: 60px;
+        border-bottom: 4px solid #f2622b;
+      }
+    }
+  }
+  .news-articles {
+    width: 1060/1920*100%;
+    margin: 0 auto;
+  }
+  .article-container {
+    width: 91.69%;
+    height: 447px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    align-content: space-between;
+    .event {
+      width: 429px;
+      height: 208px;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      border-color: #c0c0c0;
+      h1 {
+        margin: 0;
+        line-height: 1.5;
+        @include text(24px,
+        $blue,
+        bold,
+        'Montserrat',
+        none);
+      }
+      p {
+        @include text(14px,
+        #909093,
+        'normal',
+        'Open Sans',
+        none);
+        margin: 32px 0 22px 0;
+      }
+      .arrow-right {
+        font-size: 26px;
+        font-weight: 100;
+        font-family: 'Myriad Pro';
+        color: $orange;
+      }
+    }
+  }
+}
+
+.contacts {
+  height: 1120px;
+  background: url('../img/contacts_bg.jpg');
+  background-color: $blue;
+}
+
+.contact-container {
+  width: 1060/1920*100%;
+  height: 100%;
+  margin: 0 auto;
+  .contacts-block {
+    height: 399px;
+    width: 100%;
+    display: flex;
+    padding: 88px 0;
+  }
+  .contact {
+    width: 50%;
+    height: 100%;
+    border: 1px solid #4759a7;
+    padding: 84px 0 0 94px;
+    address,
+    a {
+      line-height: 1.7;
+      @include text(24px,
+      $white,
+      normal,
+      'Montserrat',
+      none);
+      font-style: normal;
+      text-decoration: none;
+      display: block;
+    }
+    address {
+      margin: 0 0 50px 0;
+    }
+    .email {
+      padding: 0 0 44px 0;
+      text-decoration: underline;
+    }
+    .phone {
+      font-weight: bold;
+      padding: 0 0 20px 0;
+    }
+    p {
+      line-height: 2.91;
+      @include text(14px,
+      #808bbf,
+      normal,
+      'Montserrat',
+      none);
+    }
+  }
+  .contact-form {
+    width: 521px;
+    height: 320px;
+    margin: 111px auto 0 auto;
+    text-align: center;
+    position: relative;
+    input[type="text"] {
+      width: 250px;
+      border: none;
+      border-bottom: 1px solid #4759a7;
+      line-height: 2.91;
+      background: transparent;
+      margin: 0 0 34px 0;
+      @include text(14px,
+      $white,
+      normal,
+      'Montserrat',
+      none);
+    }
+    input[type="text"]:nth-child(even) {
+      margin: 0 10px 0 0;
+    }
+    input[name="message"] {
+      width: 100%;
+    }
+    input[type="text"]::placeholder {
+      line-height: 2.91;
+      @include text(14px,
+      $white,
+      normal,
+      'Montserrat',
+      none);
+    }
+    input[type="submit"] {
+      width: 210px;
+      height: 45px;
+      margin: 52px;
+      background-color: $orange;
+      border: 0;
+      line-height: 1.43;
+      @include text(14px,
+      $white,
+      bold,
+      'OpenSans');
+    }
+  }
+  h1 {
+    line-height: 1.13;
+    @include text(36px,
+    $white,
+    bold);
+    &:before {
+      content: "";
+      position: absolute;
+      left: 47%;
+      top: -35px;
+      height: 4px;
+      width: 60px;
+      border-bottom: 4px solid #f2622b;
+    }
+  }
+}
+footer {
+  height: 120px;
+  background-color: #0c1334;
+  p {
+    line-height: 1.43;
+    flex: 1;
+    margin: 0 0 0 47px;
+    @include text(14px,
+    #616ca8,
+    normal,
+    'OpenSans',
+    none);
+  }
+  .footer-data {
+    width: 1060/1920*100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  li {
+    color: #b1b8dd;
+    margin: 0 0 0 22px;
+    cursor: pointer;
   }
 }
